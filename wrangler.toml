@@ -1,11 +1,8 @@
-// wrangler.jsonc
-{
-  "name": "nominatim-address-formatter",
-  "main": "src/index.ts",
-  "compatibility_date": "2025-03-07",
-  "compatibility_flags": ["nodejs_compat_v2"],
-  "observability": {
+  name = "nominatim-address-formatter",
+  main =  "src/index.ts",
+  compatibility_date = "2025-03-07",
+  compatibility_flags = ["nodejs_compat_v2"]
+  observability =  {
     "enabled": true,
     "head_sampling_rate": 1
   }
-}
