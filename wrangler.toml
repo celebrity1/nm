@@ -1,6 +1,6 @@
-  name = "nominatim-address-formatter",
-  main =  "src/index.ts",
-  compatibility_date = "2025-03-07",
+  name = "nominatim-address-formatter"
+  main =  "src/index.ts"
+  compatibility_date = "2025-03-07"
   compatibility_flags = ["nodejs_compat_v2"]
   observability =  {
     "enabled": true,
