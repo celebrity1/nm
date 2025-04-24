@@ -1,4 +1,8 @@
-  name = "nominatim-address-formatter"
-  main =  "src/index.ts"
-  compatibility_date = "2025-03-07"
-  compatibility_flags = ["nodejs_compat_v2"]
+name = "nominatim-formatter"
+main =  "src/index.ts"
+type = "javascript"  # or "webpack", but "javascript" is best for native modules
+compatibility_date = "2024-04-01"
+
+
+[ai]
+binding = "AI"
