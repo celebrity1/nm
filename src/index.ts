@@ -32,7 +32,7 @@ Respond ONLY with the JSON object.
 `;
 
     try {
-      const result = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+      const result = await ai.run('@cf/google/gemma-3-12b-it', {
         prompt,
       });
       
