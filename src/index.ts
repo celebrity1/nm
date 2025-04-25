@@ -14,25 +14,27 @@ export default {
     }
     
     // Create the AI instance with the binding from env
-    const ai = new Ai(env.AI);
+    const ai:any = new Ai(env.AI);
     
     // Step 1: Use AI to clean and understand the address
     const prompt = `
 You are an address parser. A user provided the following query:
 "${query}"
-Your task is to:
-1. Normalize the query.
-2. If the street name seems incorrect or unrecognized, remove or correct it.
-3. Return a JSON object with:
- - 'normalized': cleaned version of the input
- - 'neighborhood': if found
- - 'town_or_city': if found
- - 'is_street_valid': true/false depending on whether the street seems valid
-Respond ONLY with the JSON object.
-`;
+You are a specialized address corrector and formatter. Your task is to:
+            1. Correct any misspellings in the address
+            2. Identify and fill in any missing components if possible
+            3. Format the address properly
+            4. Provide confidence level in your corrections
+
+            Respond in JSON format with:
+            {
+              "correctedAddress": "the fully corrected address string",
+              "corrections": ["list of specific corrections made"],
+              "confidence": 0.0-1.0 (how confident you are in the corrections)
+            }`
 
     try {
-      const result = await ai.run('@cf/google/gemma-3-12b-it', {
+      const result:any = await ai.run('@cf/google/gemma-3-12b-it', {
         prompt,
       });
       
